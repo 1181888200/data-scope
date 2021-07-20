@@ -56,6 +56,7 @@ public class DataScopeInterceptor implements InnerInterceptor {
             for (Method me : method) {
                 if (me.getName().equals(methodName) && me.isAnnotationPresent(DataScope.class)) {
                     dataAuth = me.getAnnotation(DataScope.class);
+                    break;
                 }
             }
         } catch (Exception e) {
